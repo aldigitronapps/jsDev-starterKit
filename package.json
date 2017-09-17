@@ -1,0 +1,32 @@
+{
+    "name": "jsDev-starterKit",
+    "version": "1.0.0",
+    "description": "A great starting enviroment for JS Development",
+    "main": "index.js",
+    "scripts": {
+        "prestart": "node buildScripts/startMessage.js",
+        "start": "npm-run-all --parallel security-check open:src",
+        "open:src": "node buildScripts/srcServer.js",
+        "security-check": "nsp check",
+        "localtunnel": "lt --port 3000 --subdomain ikenjoku",
+        "share": "npm-run-all --parallel open:src localtunnel"
+
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aldigitronapps/jsDev-starterKit.git"
+    },
+    "keywords": [],
+    "author": "Ikechukwu Njoku",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/aldigitronapps/jsDev-starterKit/issues"
+    },
+    "homepage": "https://github.com/aldigitronapps/jsDev-starterKit#readme",
+    "dependencies": {
+        "chalk": "^2.1.0",
+        "express": "^4.15.4",
+        "npm-run-all": "^4.1.1",
+        "open": "0.0.5"
+    }
+}
